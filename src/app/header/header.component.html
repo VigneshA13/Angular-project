@@ -1,0 +1,45 @@
+<mat-toolbar color="primary" class="mat-elevation-z8">
+  <button (click)="drawer.toggle()" mat-icon-button>
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>II MCA</span>
+  <span class="example-spacer"></span>
+  <button routerLink="" mat-button>Home</button>
+  <button routerLink="about" mat-button>About</button>
+</mat-toolbar>
+<mat-drawer-container autosize>
+  <mat-drawer #drawer opened="true" mode="side" position="start">
+    <mat-nav-list>
+      <mat-list-item>
+        <button routerLink="" mat-button>
+          <mat-icon>dashboard</mat-icon> Dashboard
+        </button>
+      </mat-list-item>
+      <mat-list-item>
+        <button routerLink="timetable" mat-button>
+          <mat-icon>table</mat-icon> Time Table
+        </button>
+      </mat-list-item>
+      <mat-list-item>
+        <button routerLink="table" mat-button>
+          <mat-icon>group</mat-icon> Students
+        </button>
+      </mat-list-item>
+      <mat-list-item>
+        <button routerLink="about" mat-button>
+          <mat-icon>person</mat-icon> About
+        </button>
+      </mat-list-item>
+      <mat-list-item>
+        <button routerLink="page" mat-button>
+          <mat-icon>pages</mat-icon> Page
+        </button>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div style="text-align: center; min-height: 600px">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

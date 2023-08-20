@@ -1,0 +1,43 @@
+<div style="margin: 5%">
+  <h2>II MCA TIME TABLE</h2>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="day">
+      <th mat-header-cell *matHeaderCellDef>Day order/Hrs</th>
+      <td mat-cell *matCellDef="let element">{{ element.day }}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="first">
+      <th mat-header-cell *matHeaderCellDef>I</th>
+      <td mat-cell *matCellDef="let element">{{ element.first }}</td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="second">
+      <th mat-header-cell *matHeaderCellDef>II</th>
+      <td mat-cell *matCellDef="let element">{{ element.second }}</td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="third">
+      <th mat-header-cell *matHeaderCellDef>III</th>
+      <td mat-cell *matCellDef="let element">{{ element.third }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="four">
+      <th mat-header-cell *matHeaderCellDef>IV</th>
+      <td mat-cell *matCellDef="let element">{{ element.four }}</td>
+    </ng-container>
+    <ng-container matColumnDef="five">
+      <th mat-header-cell *matHeaderCellDef>V</th>
+      <td mat-cell *matCellDef="let element">{{ element.five }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>
